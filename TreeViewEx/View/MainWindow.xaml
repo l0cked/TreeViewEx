@@ -18,7 +18,7 @@
                 <Setter.Value>
                     <ControlTemplate TargetType="ToggleButton">
                         <Grid Width="15" Height="13" SnapsToDevicePixels="True">
-                            <Rectangle Width="9" Height="9" Stroke="#919191" SnapsToDevicePixels="True">
+                            <Rectangle Width="9" Height="9" Stroke="#919191">
                                 <Rectangle.Fill>
                                     <LinearGradientBrush EndPoint="0.5,2" StartPoint="0.5,0">
                                         <GradientStop Color="White" Offset="0"/>
@@ -27,8 +27,8 @@
                                     </LinearGradientBrush>
                                 </Rectangle.Fill>
                             </Rectangle>
-                            <Rectangle x:Name="ExpandPath" Width="1" Height="5" Stroke="Black" SnapsToDevicePixels="True"/>
-                            <Rectangle Width="5" Height="1" Stroke="Black" SnapsToDevicePixels="True"/>
+                            <Rectangle x:Name="ExpandPath" Width="1" Height="5" Stroke="Black"/>
+                            <Rectangle Width="5" Height="1" Stroke="Black"/>
                         </Grid>
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsChecked" Value="True">
@@ -85,8 +85,7 @@
                                 Grid.Row="0"
                                 Grid.Column="1"
                                 Grid.ColumnSpan="2"
-                                Background="{TemplateBinding Background}"
-                                SnapsToDevicePixels="True">
+                                Background="{TemplateBinding Background}">
                                 <ContentPresenter
                                     Name="PART_Header" 
                                     ContentSource="Header" 
@@ -130,5 +129,7 @@
         </Style>
         <!--#endregion TreeViewItemEx-->
     </Window.Resources>
-    <controls:TreeViewEx ItemsSource="{Binding Items}"/>
+    <Grid>
+        <controls:TreeViewEx ItemsSource="{Binding Items}"/>
+    </Grid>
 </Window>
