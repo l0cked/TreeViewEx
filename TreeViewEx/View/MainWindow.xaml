@@ -68,7 +68,6 @@
                                 Grid.Row="0"
                                 Grid.RowSpan="2"
                                 Grid.Column="0"
-                                Margin="0,0,1,0"
                                 Width="1"
                                 Stroke="DarkGray"
                                 Fill="White"/>
@@ -77,7 +76,6 @@
                                 Name="Expander"
                                 Grid.Row="0"
                                 Grid.Column="0"
-                                Margin="-1,0,0,0"
                                 Style="{StaticResource ExpandCollapseToggleStyle}"
                                 IsChecked="{Binding IsExpanded, RelativeSource={RelativeSource TemplatedParent}}"
                                 ClickMode="Press"/>
