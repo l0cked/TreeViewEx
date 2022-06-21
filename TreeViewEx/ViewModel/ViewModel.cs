@@ -1,4 +1,5 @@
 ﻿using System.Collections.ObjectModel;
+using System.Windows.Media;
 
 using TreeViewEx.View.Controls;
 
@@ -32,7 +33,7 @@ namespace TreeViewEx.ViewModel
             var child32 = new TreeViewItemEx { Header = "Etc" };
             child32.Items.Add(new TreeViewItemEx { Header = "Header" });
             tree3.Items.Add(child32);
-            tree3.Items.Add(new TreeViewItemEx { Header = "FFF" });
+            tree3.Items.Add(new TreeViewItemEx { Header = "This is problem", Foreground = Brushes.IndianRed });
             Items.Add(tree3);
 
             Items.Add(new TreeViewItemEx { Header = "Windows" });
